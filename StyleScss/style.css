@@ -1,0 +1,595 @@
+@import url("../fonts/font-awesome-4.7.0/css/font-awesome.min.css");
+* {
+  margin: 0px;
+}
+
+.app {
+  width: 100%;
+}
+
+h2, h1 {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+  width: 100%;
+  height: 100vh;
+  background: url("../img/wp4469835-2160x1920-wallpapers.jpg") no-repeat center fixed;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+header .menu {
+  z-index: 3;
+  background-color: rgb(255, 255, 255);
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 18px;
+  position: absolute;
+  top: 20px;
+  transition: 0.5s width;
+  -webkit-transition: 0.5s width;
+  -moz-transition: 0.5s width;
+  -ms-transition: 0.5s width;
+  -o-transition: 0.5s width;
+}
+header .menu .menu-ul {
+  padding: 0px 0px;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+header .menu .menu-ul li {
+  padding: 40px 25px;
+  cursor: pointer;
+  transition: 0.4s all;
+  -webkit-transition: 0.4s all;
+  -moz-transition: 0.4s all;
+  -ms-transition: 0.4s all;
+  -o-transition: 0.4s all;
+}
+header .menu .menu-ul li:hover {
+  color: #3a52bf;
+}
+header .menu .search {
+  font-size: 15px;
+}
+header .menu .search i {
+  color: #3a52bf;
+  margin-left: 35px;
+  cursor: pointer;
+}
+header .menu .logo span {
+  font-size: 22px;
+  color: #5271f8;
+}
+header .menu .menu:nth-of-type(4):hover .about-list {
+  display: block;
+}
+header .menu .cotant-list {
+  position: relative;
+}
+header .menu .cotant-list .about-list {
+  position: absolute;
+  transition: 0.5s all;
+  -webkit-transition: 0.5s all;
+  -moz-transition: 0.5s all;
+  -ms-transition: 0.5s all;
+  -o-transition: 0.5s all;
+  box-shadow: -2px 0px 5px black;
+  opacity: 0;
+  bottom: -240px;
+  background-color: white;
+  width: 215px;
+  color: #888;
+  visibility: hidden;
+}
+header .menu .cotant-list .about-list ul {
+  list-style: none;
+  padding: 0px;
+}
+header .menu .cotant-list .about-list ul li {
+  padding: 12px;
+  font-size: 16px;
+}
+header .menu .cotant-list .about-list ul li:hover {
+  background-color: #e1e5f1;
+}
+header .menu .cotant-list .level-list {
+  position: absolute;
+  bottom: -140px;
+  transition: 0.5s all;
+  -webkit-transition: 0.5s all;
+  -moz-transition: 0.5s all;
+  -ms-transition: 0.5s all;
+  -o-transition: 0.5s all;
+  background-color: white;
+  box-shadow: -2px 0px 5px black;
+  opacity: 0;
+  width: 200px;
+  color: #888;
+  visibility: hidden;
+}
+header .menu .cotant-list .level-list ul {
+  list-style: none;
+  padding: 0px;
+  font-size: 16px;
+}
+header .menu .cotant-list .level-list ul li {
+  padding: 11.5px;
+}
+header .menu .cotant-list .level-list ul li:first-child {
+  display: flex;
+  justify-content: space-between;
+}
+header .menu .cotant-list .level-list ul li:hover {
+  background-color: #e1e5f1;
+}
+header .menu .cotant-list .level-2 {
+  position: relative;
+}
+header .menu .cotant-list .level-up {
+  position: absolute;
+  transition: 0.5s all;
+  -webkit-transition: 0.5s all;
+  -moz-transition: 0.5s all;
+  -ms-transition: 0.5s all;
+  -o-transition: 0.5s all;
+  visibility: hidden;
+  opacity: 0;
+  background-color: #fff;
+  right: -148px;
+  width: 150px;
+  color: #888;
+  box-shadow: -2px 0px 5px black;
+}
+header .menu .cotant-list .level-up ul {
+  padding: 0px;
+  font-size: 16px;
+}
+header .menu .cotant-list .level-up ul li {
+  padding: 7px;
+}
+header .menu .cotant-list .level-up.show-level-up {
+  visibility: visible;
+  opacity: 1;
+}
+header .menu .about-list.show-list {
+  bottom: -225px;
+  visibility: visible;
+  opacity: 1;
+}
+header .menu .level-list.show-level-list {
+  bottom: -118px;
+  visibility: visible;
+  opacity: 1;
+}
+@media all and (max-width: 925.98px) {
+  header .menu {
+    width: 100%;
+    top: 0px;
+  }
+}
+@media all and (max-width: 733.98px) {
+  header .menu {
+    display: none;
+  }
+}
+header .menu-berger {
+  display: none;
+  color: white;
+  font-size: 22px;
+  z-index: 1;
+}
+@media all and (max-width: 733.98px) {
+  header .menu-berger {
+    display: block;
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    cursor: pointer;
+  }
+}
+header .menu-width-100 {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+  position: fixed;
+  top: 0px;
+}
+header .header-container-content, header .about .about-content, .about header .about-content {
+  z-index: 1;
+  text-align: center;
+  color: white;
+  line-height: 1.5;
+}
+header .header-container-content h1, header .about .about-content h1, .about header .about-content h1 {
+  font-size: 60px;
+}
+header .header-btn-content {
+  margin-top: 15px;
+}
+header .header-btn-content button {
+  border-radius: 5px;
+  padding: 20px 60;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  color: #fff;
+  font-weight: 600;
+  font-size: 16px;
+}
+header .header-btn-content button:first-child {
+  background-color: #3a52bf;
+  border: none;
+  margin-right: 15px;
+}
+@media all and (max-width: 470.98px) {
+  header .header-btn-content button:first-child {
+    margin-right: 0px;
+  }
+}
+header .header-btn-content button:last-child {
+  background: none;
+  border: 2px solid white;
+}
+header .search {
+  position: relative;
+}
+header .search .box-search {
+  position: absolute;
+}
+header .search .box-search input {
+  outline: none;
+  border: 1.5px solid #5271f8;
+  padding: 8px;
+  width: 200px;
+  border-radius: 7px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -ms-border-radius: 7px;
+  -o-border-radius: 7px;
+}
+
+button {
+  cursor: pointer;
+  z-index: 1;
+  padding: 15px 50px;
+  color: #fff;
+  background: #3a52bf;
+  border: none;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  margin-top: 15px;
+}
+
+.header-container-content, .about .about-content {
+  z-index: 1;
+  text-align: center;
+  color: white;
+  line-height: 1.5;
+}
+.header-container-content h1, .about .about-content h1 {
+  font-size: 60px;
+}
+
+.box-light, .about .box-light {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+main {
+  width: 100%;
+  height: 600px;
+  background-color: #e1e5f1;
+}
+main .seo {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+main .seo img {
+  width: 50%;
+  height: 600px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main .seo .seo-contant {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 15%;
+  line-height: 1.5;
+}
+main .seo .seo-contant h2 {
+  margin-bottom: 15px;
+  color: #333;
+}
+main .seo .seo-contant span {
+  color: #888;
+}
+main .Portfolio {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 600px;
+}
+main .Portfolio img {
+  width: 50%;
+  height: 600px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main .Portfolio .Portfolio-content {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 15%;
+  line-height: 1.5;
+}
+main .Portfolio .Portfolio-content h2 {
+  margin-bottom: 15px;
+  color: #333;
+}
+main .Portfolio .Portfolio-content span {
+  color: #888;
+}
+main .options {
+  background-color: #e1e5f1;
+}
+main .options .options-header {
+  width: 100%;
+  padding: 20px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  line-height: 2;
+}
+main .options .options-header .contact-option {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 50%;
+}
+main .options .options-header .contact-option p {
+  text-align: center;
+}
+main .options .img-option {
+  text-align: center;
+}
+@media all and (max-width: 1209px) {
+  main .options {
+    height: auto;
+    text-align: center;
+  }
+  main .options .img-option img {
+    width: 100%;
+  }
+}
+@media all and (max-width: 844.98px) {
+  main .seo {
+    flex-direction: column;
+    height: auto;
+  }
+  main .seo .seo-contant {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  main .seo img {
+    width: 100%;
+  }
+  main .Portfolio {
+    flex-direction: column-reverse;
+    height: auto;
+  }
+  main .Portfolio .Portfolio-content {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  main .Portfolio img {
+    width: 100%;
+  }
+  main .about {
+    height: auto;
+  }
+  main .about .about-content h1 {
+    line-height: 1.2;
+  }
+  main .projects {
+    height: auto;
+  }
+  main .projects .container-img-projects {
+    height: auto;
+  }
+  main .projects .container-img-projects img {
+    width: 100%;
+  }
+  main .comments {
+    height: auto;
+    flex-direction: column;
+  }
+  main .comments .comment-container {
+    width: 100%;
+    height: auto;
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+  main .comments .comment-container .slider {
+    display: none;
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+}
+
+.about {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 400px;
+  flex-direction: column;
+  background: url("../img/wp4469807-2160x1920-wallpapers.jpg") no-repeat center fixed;
+  background-size: cover;
+}
+.about .about-content {
+  width: 60%;
+}
+.projects {
+  width: 100%;
+  background-color: black;
+  padding: 20px 0px;
+}
+.projects .project-header {
+  text-align: center;
+  color: #fff;
+  line-height: 2;
+}
+.projects .container-img-projects {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-around;
+  height: 140vh;
+}
+.projects .container-img-projects img {
+  width: 25%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  cursor: pointer;
+  position: relative;
+}
+
+.h-20 {
+  width: 100%;
+  height: 20px;
+  background-color: white;
+}
+
+.comments {
+  width: 100%;
+  height: 400px;
+  background: url("../img/clouds-3840x2160-4k-hd-wallpaper-sky-iceland-beach-ocean-mountains-921.jpg") no-repeat center fixed;
+  background-size: cover;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  color: white;
+}
+.comments .comment-header {
+  padding: 40px 0px;
+}
+.comments .comment-container {
+  width: 45%;
+  height: auto;
+  padding: 15px;
+  text-align: center;
+  position: relative;
+}
+.comments .comment-container .slider {
+  position: absolute;
+  top: 50%;
+  left: 0px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+}
+.comments .comment-container .slider i {
+  cursor: pointer;
+  font-size: 30px;
+  color: #888;
+  transition: 0.4s color;
+  -webkit-transition: 0.4s color;
+  -moz-transition: 0.4s color;
+  -ms-transition: 0.4s color;
+  -o-transition: 0.4s color;
+}
+.comments .comment-container .slider i:hover {
+  color: #fff;
+}
+.comments .comment-container .comment {
+  display: none;
+  animation: outtime 0.8s ease-in-out;
+  -webkit-animation: outtime 0.5s linear;
+}
+.comments .comment-container .comment p {
+  line-height: 1.5;
+  margin-bottom: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+}
+.comments .comment-container .comment img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@-webkit-keyframes outtime {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes outtime {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.comments .comment-container .comment.show-block {
+  display: block;
+}/*# sourceMappingURL=style.css.map */
